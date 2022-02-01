@@ -1,0 +1,595 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+    font-size: 22px;
+}
+
+body{
+    font-family:'Bakbak One',cursive;
+    background-color: black;  
+}
+
+/*Configurar a scrollbar*/
+::-webkit-scrollbar {
+    width:9px;
+}
+
+::-webkit-scrollbar-track {
+    background:rgba(94, 62, 62, 0.932) 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #e63e20e8;
+    border-radius: 10px;
+}
+/*Fim  scrollbar*/
+
+/*Cofigurar navbar (barra de navegação)*/
+
+/* Exterior da navbar*/
+nav{
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    bottom: 0px;
+    z-index: 20;
+}
+
+nav ul{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0px;
+    width: 850px;
+    height: 70px;
+    background-color: white;
+}
+
+nav ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    width: 180px;
+    height: 30px;
+    padding: 5px;
+    transition: all 0.05s;
+}
+
+nav ul li:hover::after{
+    content: '';
+    position: absolute;
+    top: 2px;
+    width: 0; 
+    height: 0; 
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 13px solid #000;
+    transition: all 0.5s;
+}
+/* Itemns da navbar*/
+
+/* Onde*/
+#onde{
+    background-color: red;
+}
+
+#onde:hover::after{
+    border-bottom: 13px solid red;
+}
+
+/* Ranking */
+#ranking{
+    background-color: orange;
+}
+
+#ranking:hover::after{
+    border-bottom: 13px solid orange;
+}
+
+/*Piloto*/
+#piloto{
+    background-color: red;
+}
+
+#piloto:hover::after{
+    border-bottom: 13px solid red;
+}
+
+/* Bilhetes*/
+#bilhete{
+    background-color: black;
+}
+
+#bilhete a{
+    color: orange;
+}
+
+#bilhete:hover::after{
+    border-bottom: 13px solid black;
+}
+/*Fim navbar (barra de navegação)*/
+
+/* Configuração dos quadrados*/
+.conteiner-squares{
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    top: 220px;
+    right: 180px;
+}
+
+.squares-top{
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+    height: 50px;
+}
+
+.squares-top span{
+    background-color: red;
+    width: 45px;
+    height: 45px;
+    margin: 2px;
+}
+
+.squares-bottom{
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+    height: 50px;
+}
+
+.squares-bottom span{
+    background-color: red;
+    width: 45px;
+    height: 45px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+/* Animação shake quadrados*/
+.squares-top span:hover{
+    animation: animh2 1.5s linear infinite;
+}
+
+.squares-bottom span:hover{
+    animation: animh2 1.5s linear infinite;
+}
+
+/*Fim Quadrados*/
+
+/*Configurção Div Geral*/
+.conteiner-geral{
+    width: 100%;
+    height: 100vh;
+}
+
+/*Configuração Div Pilotos*/
+
+#pilotos{
+    background-image: url(./img/fundo.png);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteiner-pilotos{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    overflow: hidden;
+    width: 400px;
+    height: 110px;
+    top: 350px;
+    right: 0px;
+}
+
+.content-piloto{
+    position: relative;
+    width: 200px;
+    height: 35px;
+    margin-left: 20px;
+    animation: animpilotos 2s ease-in-out;
+    animation-fill-mode: both;
+    transition: all 1s;
+}
+
+.content-piloto::before{
+    content: '';
+    width: 15px;
+    height: 15px;
+    background-color: #CD0000;
+    border-radius: 50%;
+    position: absolute;
+    left: -15px;
+}
+
+.content-piloto a{
+    position: absolute;
+    bottom: 15px;
+    left: 5px;
+    font-size: 18px;
+    color: white;
+}
+
+.content-piloto a:hover{
+    animation: animh2 2s linear infinite;
+    color:red
+}
+
+/*Animações dos Pilotos*/
+#piloto1{
+    animation-delay: 1.5s;
+}
+
+#piloto2{
+    animation-delay: 1s;
+}
+
+#piloto3{
+    animation-delay: 0.5s;
+}
+
+
+@keyframes animpilotos {
+    0%{
+        transform: translateX(500px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+/*Fim Div Pilotos*/
+
+/*Configuração Título*/
+.conteiner-titulo{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    width: 365px;
+    height: 600px;
+    z-index: 2;
+}
+
+.titulo-moto{
+    display: flex;
+    width: 100%;
+    height: 130px;
+}
+
+.titulo-gp{
+    display: flex;
+    width: 100%;
+    height: 130px;
+}
+
+.titulo-data{
+    display: flex;
+    width: 100%;
+    height: 130px;
+}
+
+.titulo-moto-2{
+    display: flex;
+    position: absolute;
+    font-size: 100px;
+    width: 100%;
+    height: 130px;
+    left: -10px;
+    z-index: -1;
+}
+
+.titulo-gp-2{
+    display: flex;
+    position: absolute;
+    font-size: 100px;
+    width: 100%;
+    height: 130px;
+    bottom: 340px;
+    left: -10px;
+    z-index: -1;
+}
+
+.titulo-data-2{
+    display: flex;
+    position: absolute;
+    font-size: 100px;
+    width: 100%;
+    height: 130px;
+    bottom: 210px;
+    left: -10px;
+    z-index: -1;
+}
+
+.titulo-data-2 h2{
+    color: red;
+}
+
+.titulo-gp-2 h2{
+    color: red;
+}
+
+.titulo-moto-2 h2{
+    color: red;
+}
+
+h2{
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 140px;
+    margin: 2px;
+}
+/*Animação Titulo Tremer*/
+h2:hover{
+    animation: animh2 1s linear infinite;
+}
+
+@keyframes animh2 {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+/*Fim Titulo*/
+
+/*Configurar Imagem Mota*/
+.conteiner-mota{
+    position: absolute;
+    z-index: 40;
+    bottom: 0px;
+    left: -200px;
+    -webkit-animation: slide-br 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-br 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes slide-br {
+    0% {
+      -webkit-transform: translateY(-400) translateX(-400);
+              transform: translateY(-400) translateX(-400);
+    }
+    100% {
+      -webkit-transform: translateY(0px) translateX(550px);
+              transform: translateY(0px) translateX(550px);
+    }
+  }
+  @keyframes slide-br {
+    0% {
+      -webkit-transform: translateY(-400) translateX(-400);
+              transform: translateY(-400) translateX(-400);
+    }
+    100% {
+        -webkit-transform: translateY(0px) translateX(550px);
+        transform: translateY(0px) translateX(550px);
+    }
+  }
+/*Fim Imagem */
+.conteiner-texto{
+    width:100%;
+    height: 140px;
+    margin:auto;
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(-90deg, red, white black); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(-90deg, red white, black); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(-90deg, red ,white, black); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(-90deg, red, white, black); /* Standard syntax */
+    background-size: cover;
+    color:rgb(216, 89, 89); 
+    font-size: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0.1em 0.1em 0.05em rgb(247, 244, 244);
+}
+
+/*Bilhetes*/
+
+.conteiner-form{
+    width: 100%;
+    margin:auto;
+    background-color:#141414;
+    color:#fff; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 140vh;
+}
+
+.comprar-titulo:hover{
+    animation: animh2 2s linear infinite;
+}
+
+.titulos-form{
+    font-size: 23px;
+    color: coral;
+}
+/*Personalizar dados pessoais */
+input[type=text], input[type=number],input[type=email]{
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid red;
+    background-color: #141414;
+    color: white;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border-radius: 10px;
+    font-size: 17px;
+}
+
+::-webkit-input-placeholder {
+    color: rgb(224, 215, 215);
+    font-size: 17px;
+}
+
+
+
+input[type=text]:hover, input[type=number]:hover,input[type=email]:hover{
+    background-color: #ffa088;
+    color: rgb(66, 63, 63);
+    --webkit-input-placeholder: rgb(66, 63, 63);
+}
+
+select {
+    border: none;
+    box-sizing: border-box;
+    background-color: #141414;
+    border-bottom: 2px solid red;
+    color: white;
+    padding-right: 20px;
+    font-size: 17px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border-radius: 10px;
+    border-radius: 10px;
+}
+
+select:hover {
+    background-color: #ffa088;
+    color: rgb(66, 63, 63);
+}
+
+/*Fim dados pessoais */
+
+/*Perzonalizar bilhetes*/
+.container-radio{
+    margin:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 330px;
+    height: 170px;
+}
+/*Perzonalizar todos os radios com imagem*/
+.img-form{
+    width: 320px;
+    height: 150px;
+    padding: 7px;
+}
+
+.img-form:hover{
+    width: 330px;
+    height: 170px;
+    margin: 1px 4px 0 0;
+    padding: 5px;
+    background-color: #e74f13;
+}
+
+.img__description{
+    color: wheat;
+}
+
+[type=radio] { 
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    border-radius: 4px;
+  }
+[type=radio] + img {
+    cursor: pointer;
+  }
+[type=radio]:checked + img {
+    outline: 4px solid #e74f13;
+    border-radius: 4px;
+}
+/*FimPerzonalizar todos os radios com imagem*/
+/*Fim Perzonalizar bilhetes*/
+
+/*Perzonalizar Extras*/
+[type=checkbox]{
+    all: unset;
+    border: 1px solid rgb(221, 217, 217);
+    background-color: whitesmoke;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    cursor: pointer;
+    
+}
+[type=checkbox]:checked{
+    background-color: rgb(202, 130, 82);
+    width: 20px;
+    height: 20px;
+}
+
+[type=checkbox]:hover{
+    background-color: rgb(247, 191, 155);
+    width: 20px;
+    height: 20px;
+}
+/*Fim Perzonalizar Extras*/
+
+/*Personalizar Texto Comidas*/
+table{
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
+    color: wheat;
+    width: 970px;
+}
+/*Personalizar Texto Comidas*/
+.botao{
+    text-align: center;
+}
+
+.btn1{
+    background-color: #998618;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 20px;
+    padding: 15px 32px;
+    font-size: 20px;
+    padding: 15px 32px;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+}
+
+.btn1:hover {
+    background-color: #d6c563; 
+    color: rgb(39, 38, 38);
+    cursor: pointer;
+}
+
+.btn2{
+    background-color: #bb5317; 
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 20px;
+    padding: 15px 32px;
+    font-size: 20px;
+    padding: 15px 32px;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.btn2:hover {
+    background-color: #be5f28; 
+    color: rgb(39, 38, 38);
+}
+/*Personalizar butões */

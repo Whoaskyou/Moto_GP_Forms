@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moto GP</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="imagex/png" href="./img/icon.png">
+</head>
+<body>
+
+    <nav class="menu">
+        <ul>
+            <li id="onde"><a href="">Onde </a></li>
+            <li id="ranking"><a href="">Ranking</a></li>
+            <li id="piloto"><a href="#pilotos">Pilotos</a></li>
+            <li id="bilhete"><a href="#bilhetes">Bilhetes</a></li>
+        </ul>
+    </nav>
+
+    <div class="conteiner-geral" id="pilotos">
+
+        <div class="conteiner-squares">
+            <div class="squares-top">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="squares-bottom">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="conteiner-pilotos">
+            <div class="content-piloto" id="piloto1">
+                <a href="https://pt.wikipedia.org/wiki/Valentino_Rossi">Valentino Rossi</a>
+            </div>
+            <div class="content-piloto" id="piloto2">
+                <a href="https://pt.wikipedia.org/wiki/Miguel_Oliveira">Miguel Oliveira</a>
+            </div>
+            <div class="content-piloto" id="piloto3">
+                <a href="https://pt.wikipedia.org/wiki/Loris_Baz">Loris Baz</a>
+            </div>
+        </div>
+
+        <div class="conteiner-titulo">
+            <div class="titulo-moto">
+                <h2>M</h2>
+                <h2>o</h2>
+                <h2>t</h2>
+                <h2>o</h2>
+            </div>
+            <div class="titulo-moto-2">
+                <h2>M</h2>
+                <h2>o</h2>
+                <h2>t</h2>
+                <h2>o</h2>
+            </div>
+            <div class="titulo-gp">
+                <h2>g</h2>
+                <h2>p</h2>
+            </div>
+            <div class="titulo-gp-2">
+                <h2>g</h2>
+                <h2>p</h2>
+            </div>
+            <div class="titulo-data">
+                <h2>1</h2>
+                <h2>9</h2>
+                <h2>7</h2>
+                <h2>9</h2>
+            </div>
+            <div class="titulo-data-2">
+                <h2>1</h2>
+                <h2>9</h2>
+                <h2>7</h2>
+                <h2>9</h2>
+            </div>
+        </div>
+
+        <div class="conteiner-mota">
+            <img src="./img/mota.png">
+        </div>
+
+    </div>
+    <div class="conteiner-texto" id="bilhetes">
+        <h3 class="comprar-titulo">Comprar Bilhetes</h3>
+    </div>
+        <div class="conteiner-form" id="bilhetes">
+            <form method="get">
+                <p class="titulos-form">Dados Pessoais:</p>
+
+                <p><input  type="text" placeholder="Nome Completo" name="Nome" required > </p>
+                <p><input  type="text" placeholder="Morada Completa" name="Morada" required > </p>
+                <p><input  type="number" placeholder="Telemovel (+351 ...)" name="Telemovel" minlength="9" maxlength="9" required></p>   
+                <p><input  type="email" placeholder="E-mail" name="Email" required></p>
+
+                <select>
+                  <option name="Género" value=""> Escolha Género </option>
+                  <option name="Género" value="Masculino">Masculino</option>
+                  <option name="Género" value="Feminino">Feminino</option>
+                  <option name="Género" value="Desconhecido">Prefiro não dizer</option>
+                </select>
+
+                <br>
+                <br>
+                <div>
+                <p class="titulos-form">Selecione o bilhete:</p>
+                <br>
+                <div class= "container-radio">
+                <label>
+                    <input type="radio" name="Bilhete" value="Bilhete 1 dia - 5 €">
+                    <img class="img-form" src="./img/bilhete1.png">
+                </label>
+                <label>
+                    <input type="radio" name="Bilhete" value="Bilhete 2 dia - 9 €">
+                    <img class="img-form" src="./img/bilhete2.png">
+                </label>
+                <label>
+                <input type="radio" name="Bilhete" value="Bilhete VIP (acesso ao backstage) - 15 €">
+                    <img class="img-form" src="./img/bilhetevip.png">
+                </div>  
+                    <p class="img__description">*Compra o nosso VIP e terás acesso ao backstage!!!</p>
+                </label>  
+                <br>
+                <br>
+            
+                <p class="titulos-form">Extras</p>
+                <label>Conhecer Piloto - 100€
+                    <input type="checkbox" name="Conhecer-Piloto" value="Conheçer Piloto - 100€" >
+                    <span class="checkmark"></span>
+                </label>
+
+                <br>
+                <br>
+                <br>
+                <p class="titulos-form">Refeição:</p>
+                <br>
+                <div class= "container-radio">
+                <label>
+                    <input type="radio" name="Refeicao" value="Prato - Carne">
+                    <img class="img-form" src="./img/carne.jpg">
+                </label>
+                <label>
+                    <input type="radio" name="Refeicao" value="Prato - Peixe">
+                    <img class="img-form" src="./img/peixe.jpg">
+                </label>
+                <label>
+                    <input type="radio" name="Refeicao" value="Prato - Vegetariano">
+                    <img class="img-form" src="./img/vegan.jpg">
+                </label>
+                </div>
+                <table>
+                    <tr>
+                        <td >Parto de Carne</td>
+                        <td >Parto de Peixe</td>
+                        <td >Parto de Vegetariano</td>
+                    </tr>
+                </table>
+                <br>
+                <div class="botao">
+                    <button class="btn1" type="reset">Repor</button>
+                    <button class="btn2" type="submit">Enviar</button>
+                </div>
+            </form>  
+        </div>       
+</body>
+</html>
